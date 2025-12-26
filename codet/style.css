@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background: #123;
+ font-family: "Noto Naskh Arabic", serif;
+}
+
+.app {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.6em;
+}
+
+.title .rock {
+    color: blue;
+}
+
+.title .scissors {
+    color: brown;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+}
+
+.choices {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 15px;
+}
+
+.choice {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 5px black;
+    transition: .3s ease-in-out;
+}
+
+.choice:hover {
+    background: #cecece;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon-user {
+    font-size: 2em;
+}
+
+.score {
+    font-size: 1.2em;
+}
+
+.bot-img {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+}
+
+.bot-choices .choice {
+    background-color: #efefef;
+    display: none;
+    transform: rotateY(180deg);
+}
+
+.bot-choices .choice:hover {
+    transform: rotateY(180deg);
+    background: #efefef;
+    cursor: auto;
+}
+
+.bot-choices .choice.show {
+    display: flex;
+}
+
+.bot {
+    direction: ltr;
+}
+
+.hide-left {
+    transition: 1s;
+    transform: translateX(-250px);
+    opacity: 0;
+}
+
+.hide-right {
+    transition: 1s;
+    transform: translateX(250px);
+    opacity: 0;
+}
+
+.result {
+    color: black;
+    font-size: 2em;
+    padding: 10px 15px;
+    background-color: #efefef;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 20px;
+}
+
+.result.show {
+    transition: .4s;
+    transform: translate(-50%, -50%) scale(1);
+}
